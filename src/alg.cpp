@@ -25,10 +25,10 @@ std::string infx2pstfx(std::string inf) {
   for (int i = 0; i < inf.size(); i++) {
     int prir = priority(inf[i]);
     if (prir == -1) {
-      if (ps.empty() == False && priority(inf[i - 1]) != -1) {
-        stck.push_back(' ');
+      if (!ps.empty() && priority(inf[i - 1]) != -1) {
+        ps.push_back(' ');
       }
-      stck.push_back(inf[i]);
+      ps.push_back(inf[i]);
     } else if (prir == 0 || prir > priority(stck.get()) || stck.isEmpty()) {
             stck.push(inf[i]);
         } else {
