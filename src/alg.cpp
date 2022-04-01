@@ -56,13 +56,12 @@ std::string infx2pstfx(std::string inf) {
     }
     return ps;
 }
-
 int eval(std::string pref) {
   TStack <int, 100> stck1;
   std::string temp;
-  int num = 0, mun = 0;
-  size_t beg = 0, fin = 0;
-  for (int i = 0; i < pref.size(); i++) {
+    int num = 0, mun = 0;
+    size_t beg = 0, fin = 0;
+  for (size_t i = 0; i < pref.size(); i++) {
     if (pref[i] == ' ' || i == pref.size()-1) {
       fin = i;
       if (i == pref.size() - 1)
