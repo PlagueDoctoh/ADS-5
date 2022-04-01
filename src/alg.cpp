@@ -66,7 +66,7 @@ int eval(std::string pref) {
   for (int i = 0; i < pref.size(); i++) {
     if (pref[i] == ' ' || i == pref.size()-1) {
       fin = i;
-      if (i == pref.size() - 1) 
+      if (i == pref.size() - 1)
         fin++;
       temp = pref.substr(beg, fin - beg);
       beg = fin + 1;
