@@ -20,10 +20,10 @@ int priority(char ch) {
 }
 
 std::string infx2pstfx(std::string inf) {
-  Tstack <char, 100> stck;
+  TStack <char, 100> stck;
   std::string ps;
   for (int i = 0; i < inf.size(); i++) {
-    int prir = priority(inf[i])
+    int prir = priority(inf[i]);
     if (prir == -1) {
       if (ps.empty() == False && priority(inf[i - 1]) != -1) {
         stck.push_back(' ');
@@ -40,7 +40,7 @@ std::string infx2pstfx(std::string inf) {
                 }
                 stck.pop();
             } else {
-                while (priority(stck.get()) >= prir {
+                while (priority(stck.get()) >= prir) {
                     ps.push_back(' ');
                     ps.push_back(stck.get());
                     stck.pop();
@@ -56,7 +56,6 @@ std::string infx2pstfx(std::string inf) {
     }
     return ps;
 }
-}
 
 int eval(std::string pref) {
   TStack <int, 100> stck1;
@@ -71,7 +70,7 @@ int eval(std::string pref) {
       temp = pref.substr(beg, fin - beg);
       beg = fin + 1;
       bool num = true;
-      for (int i = 0; i < temp.size; i++)
+      for (int i = 0; i < temp.size(); i++)
         if (temp[i] < '0' || temp[i] > '9') {
           num = false;
           break;
