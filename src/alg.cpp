@@ -68,14 +68,14 @@ int eval(std::string pref) {
         fin++;
       temp = pref.substr(beg, fin - beg);
       beg = fin + 1;
-      bool num = true;
+      bool tnum = true;
       for (int i = 0; i < temp.size(); i++)
         if (temp[i] < '0' || temp[i] > '9') {
-          num = false;
+          tnum = false;
           break;
         }
     }
-    if (num = true) {
+    if (tnum) {
       stck1.push(std::stoi(temp));
     } else {
       mun = stck1.get();
