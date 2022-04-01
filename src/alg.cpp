@@ -30,10 +30,10 @@ std::string infx2pstfx(std::string inf) {
         stck.push_back(' ');
       }
       stck.push_back(inf[i]);
-    } else if (prir == 0) || prir > priority(stck.get()) || stck.isEmpty()) {
+    } else if (prir == 0 || prir > priority(stck.get()) || stck.isEmpty()) {
             stck.push(inf[i]);
         } else {
-            if (prir == 1)) {
+            if (prir == 1) {
                 while (stck.get() != '(') {
                     ps.push_back(' ');
                     ps.push_back(stck.get());
