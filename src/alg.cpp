@@ -78,8 +78,7 @@ int eval(std::string pref) {
             }
             if (tNum) {
                 stck1.push(std::stoi(temp));
-            }
-            else {
+            } else {
                 mun = stck1.get();
                 stck1.pop();
                 num = stck1.get();
